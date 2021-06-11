@@ -1,0 +1,48 @@
+
+<div class="container ">
+<form [formGroup]="detallesForm">
+  <div class="form-group rounded" style="background-color: #FFFF;">
+    <div class="form-margin">
+      <div id="htmlData" class="htmldata">
+    <div class="mb-3 row g-3">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Nombre:</label>
+      <div class="col-sm-10">
+
+        <input type="text" style="width: 20vh;" readonly class="form-control-plaintext " formControlName="nombre" readonly>
+      </div>
+
+      <div class="col-sm-10">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Primer Movimiento:</label>
+        <input type="text" class="form-control"  formControlName="Primer_movimiento" readonly/>
+      </div>
+    </div>
+    <div class="mb-3 row g-3">
+    <label for="labelNombre">Segundo Movimiento:</label>
+  </div>
+  <div class="col-sm-10">
+    <input type="text" class="form-control"  formControlName="Segundo_Movimiento" readonly />
+  </div><br>
+  <div class="mb-3 row">
+    <label for="labelNombre">Experiencia Base:</label>
+  </div>
+  <div class="col-sm-10">
+    <input type="text" class="form-control form-control-lg"  formControlName="Experciencia_base" readonly/>
+  </div>
+</div>
+  <hr>
+  <div class="mb-3 row">
+    <div class="col" >
+      <button type="submit" class="btn btn-outline-success" (click)="exportar()">Guardar en PDF</button>
+      <button type="submit" class="btn btn-outline-info" (click)="Atras()">Atras</button>
+    </div>
+
+
+  </div>
+
+  </div>
+
+
+</div>
+</form>
+</div>
+

@@ -1,0 +1,30 @@
+
+
+<div class="container">
+<div class="input-group mb-3">
+  <input [formControl]="search" type="text" class="form-control rounded-pill" placeholder="Ejemplo: Pikachu" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+</div>
+<div class="container">
+<table class="table table-hover rounded" style="background-color: #FFFF;">
+  <thead>
+    <tr>
+      <th scope="col">Pokemon</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let poke of Pokemones| filtro:filtro_value | paginate: { itemsPerPage: 10, currentPage: p } " (click)="detalle(poke.name)">
+      <th scope="row">{{poke.name}}</th>
+    </tr>
+  </tbody>
+</table>
+
+<pagination-controls class="pagination" (pageChange)="p = $event" ></pagination-controls>
+
+</div>
+
+
+
+
+
